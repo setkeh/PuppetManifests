@@ -12,3 +12,15 @@ If you add my SSH keys to your server dont forget to pm me their IP's :P
 Things and Stuff:
 -----------------
 All site wide config should go in sites/ directory sites.pp will automatically include all manifests in this DIR
+
+
+Tools and Modules:
+------------------
+https://github.com/kbarber/puppet-iptables
+https://forge.puppetlabs.com/justinclayton/sudo
+https://forge.puppetlabs.com/nightfly/ssh_keys
+https://forge.puppetlabs.com/attachmentgenie/ssh
+https://forge.puppetlabs.com/puppetlabs/aws
+https://forge.puppetlabs.com/ajjahn/dns
+https://forge.puppetlabs.com/puppetlabs/ntp
+https://forge.puppetlabs.com/jfryman/nginx
