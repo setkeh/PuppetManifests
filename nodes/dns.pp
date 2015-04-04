@@ -27,6 +27,6 @@ include dns::server
       ptr  => true;
     'test':
       zone => 'setkeh.local',
-      data => ['192.168.1.12];
+      data => ['192.168.1.12'];
       ptr  => true;
   }
