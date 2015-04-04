@@ -31,9 +31,9 @@ class { 'sudo':
     visiblepw      => false,
   },
   confs_hash       => {
-    'setkeh'       => {
+    '%wheel'       => {
       ensure       => present,
-      content      => 'setkeh ALL=(ALL) NOPASSWD: ALL',
+      content      => '%wheel ALL=(ALL) NOPASSWD: ALL',
     },
   },
 }
