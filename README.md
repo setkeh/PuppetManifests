@@ -16,7 +16,6 @@ All site wide config should go in sites/ directory sites.pp will automatically i
 
 Tools and Modules:
 ------------------
-https://github.com/kbarber/puppet-iptables
 https://forge.puppetlabs.com/justinclayton/sudo
 https://forge.puppetlabs.com/nightfly/ssh_keys
 https://forge.puppetlabs.com/attachmentgenie/ssh
