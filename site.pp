@@ -39,6 +39,7 @@ node 'dns.setkeh.local' {
       data => ['192.168.1.12'],
       ptr  => true;
   }
-  
+}
+
 # Site Wide Config
 import 'site/*.pp'
