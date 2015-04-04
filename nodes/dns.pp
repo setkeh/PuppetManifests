@@ -1,5 +1,6 @@
 include dns::server
 
+class { 'dns::server':
   # Forwarders
   dns::server::options { '/etc/bind/named.conf.options':
     forwarders => [ '8.8.8.8', '8.8.4.4' ]
@@ -30,3 +31,4 @@ include dns::server
       data => ['192.168.1.12'];
       ptr  => true;
   }
+}
