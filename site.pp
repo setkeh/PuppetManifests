@@ -10,7 +10,7 @@ node 'dns.setkeh.local' {
   include dns::server
 
   # Forwarders
-  dns::server::options { '/etc/bind/named.conf.options':
+  dns::server::options { '/etc/named/named.conf.options':
     forwarders => [ '8.8.8.8', '8.8.4.4' ]
   }
 
