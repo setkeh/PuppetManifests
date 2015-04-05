@@ -17,9 +17,15 @@ All site wide config should go in sites/ directory sites.pp will automatically i
 Tools and Modules:
 ------------------
 https://forge.puppetlabs.com/justinclayton/sudo
+
 https://forge.puppetlabs.com/nightfly/ssh_keys
+
 https://forge.puppetlabs.com/attachmentgenie/ssh
+
 https://forge.puppetlabs.com/puppetlabs/aws
+
 https://forge.puppetlabs.com/ajjahn/dns
+
 https://forge.puppetlabs.com/puppetlabs/ntp
+
 https://forge.puppetlabs.com/jfryman/nginx
