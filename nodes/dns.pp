@@ -1,17 +1,32 @@
-bind::zone {'setkeh.local':
-  zone_contact => 'setkeh@gmail.com',
-  zone_ns      => ['ns0.setkeh.local'],
-  zone_serial  => '2012112901',
-  zone_ttl     => '604800',
-  zone_origin  => 'setkeh.local',
+class { 'bind':
+  confdir    => '/etc/named',
+  cachedir   => '/var/lib/named',
+  forwarders => [
+    '8.8.8.8',
+    '8.8.4.4',
+  ],
+  dnssec     => true,
+  version    => 'Controlled by Puppet',
 }
 
-bind::a { 'Hosts in example.com':
-  ensure    => 'present',
-  zone      => 'example.com',
-  ptr       => false,
-  hash_data => {
-    'test' => { owner => '192.168.1.12', }, 
-  },
+bind::zone { 'setkeh.local':
+  zone_type       => 'master',
+  domain          => 'setkeh.local',
+ #allow_updates   => [ 'key local-update', ],
+ #allow_transfers => [ 'secondary-dns', ],
+  ns_notify       => true,
+  dnssec          => false,
 }
 
+resource_record { 'test.setkeh.local address':
+  ensure  => present,
+  record  => 'test.setkeh.local',
+  type    => 'A',
+  data    => [ '192.168.1.12' ],
+  ttl     => 86400,
+  zone    => 'setkeh.local',
+  server  => 'ns.setkeh.local',
+  #keyname => 'local',
+  #hmac    => 'hmac-sha1',
+  #secret  => 'aLE5LA=='
+}
