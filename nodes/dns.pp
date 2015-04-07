@@ -9,24 +9,24 @@ class { 'bind':
   version    => 'Controlled by Puppet',
 }
 
-bind::zone { 'setkeh.local':
-  zone_type       => 'master',
-  domain          => 'setkeh.local',
- #allow_updates   => [ 'key local-update', ],
- #allow_transfers => [ 'secondary-dns', ],
-  ns_notify       => true,
-  dnssec          => false,
-}
+#bind::zone { 'setkeh.local':
+#  zone_type       => 'master',
+#  domain          => 'setkeh.local',
+# #allow_updates   => [ 'key local-update', ],
+ ##allow_transfers => [ 'secondary-dns', ],
+#  ns_notify       => true,
+#  dnssec          => false,
+#}
 
-resource_record { 'test.setkeh.local address':
-  ensure  => present,
-  record  => 'test.setkeh.local',
-  type    => 'A',
-  data    => [ '192.168.1.12' ],
-  ttl     => 86400,
-  zone    => 'setkeh.local',
-  server  => 'ns.setkeh.local',
+#resource_record { 'test.setkeh.local address':
+#  ensure  => present,
+#  record  => 'test.setkeh.local',
+#  type    => 'A',
+#  data    => [ '192.168.1.12' ],
+#  ttl     => 86400,
+#  zone    => 'setkeh.local',
+#  server  => 'ns.setkeh.local',
   #keyname => 'local',
   #hmac    => 'hmac-sha1',
   #secret  => 'aLE5LA=='
-}
+#}
