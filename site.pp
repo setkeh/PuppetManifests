@@ -9,7 +9,6 @@ node 'dns.setkeh.local' {
 #import 'nodes/dns.pp'
 include pdns
 pdns::nameserver {
-  nameserver:
     backend:        'sqlite'
     listen_address: '192.168.1.254'
     forward_domain: 'local'
