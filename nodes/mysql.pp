@@ -1,5 +1,3 @@
-include mysql
-
 class { "mysql":
   root_password => 'PossiblyAPassword',
 }
