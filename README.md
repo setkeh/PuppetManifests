@@ -13,6 +13,8 @@ Things and Stuff:
 -----------------
 All site wide config should go in sites/ directory sites.pp will automatically include all manifests in this DIR
 
+Power DNS required some directory patches if you need to edit this you can edit the variable $pdns_dirs in nodes/dns.pp
+
 
 Tools and Modules:
 ------------------
