@@ -33,3 +33,5 @@ https://forge.puppetlabs.com/puppetlabs/ntp
 https://forge.puppetlabs.com/jfryman/nginx
 
 https://forge.puppetlabs.com/example42/yum
+
+https://forge.puppetlabs.com/puppetlabs/mysql
