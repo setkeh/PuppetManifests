@@ -1,14 +1,11 @@
 include mysql
 
-class { 'mysql::server':
-  root_password           => 'strongpassword',
-  remove_default_accounts => true,
-  override_options        => $override_options,
+class { "mysql":
+  root_password => 'PossiblyAPassword',
 }
 
-mysql::db { 'DNS':
-  user     => 'dnsuser',
-  password => 'dnspass',
-  host     => 'localhost',
-  grant    => ['SELECT', 'UPDATE'],
+mysql::grant { 'DNS':
+  mysql_user     => 'dnsuser',
+  mysql_password => 'dnspassword',
+  mysql_host     => '192.168.1.254/255.255.255.0',
 }
