@@ -8,15 +8,17 @@ node 'dns.setkeh.local' {
   #puppet code
 #import 'nodes/dns.pp'
 include pdns
-pdns:
+pdns::nameserver {
   nameserver:
     backend:        'sqlite'
     listen_address: '192.168.1.254'
     forward_domain: 'local'
-  resolver:
+  }
+  pdns::resolver {
     listen_address: '127.0.0.1'
     forward_domain: 'local'
     nameservers:    '8.8.8.8,8.8.4.4'
+  }
 }
 
 # Site Wide Config
