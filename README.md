@@ -24,8 +24,10 @@ https://forge.puppetlabs.com/attachmentgenie/ssh
 
 https://forge.puppetlabs.com/puppetlabs/aws
 
-https://forge.puppetlabs.com/ajjahn/dns
+https://forge.puppetlabs.com/antonlindstrom/powerdns
 
 https://forge.puppetlabs.com/puppetlabs/ntp
 
 https://forge.puppetlabs.com/jfryman/nginx
+
+https://forge.puppetlabs.com/example42/yum

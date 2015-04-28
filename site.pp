@@ -6,6 +6,7 @@ node '841734fa-cd43-4516-baa9-75e7a875d82e' {
 }
 node 'dns.setkeh.local' {
   #puppet code
+import 'nodes/yum.pp'
 include powerdns
 powerdns::config { 'cache-ttl':
   ensure => present,
