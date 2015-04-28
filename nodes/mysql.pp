@@ -1,6 +1,6 @@
 include mysql
 
-class { '::mysql::server':
+class { 'mysql::server':
   create_root_user        => 'true',
   root_password           => 'strongpassword',
   remove_default_accounts => true,
