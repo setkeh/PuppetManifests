@@ -1,6 +1,8 @@
 class { "mysql":
   root_password => 'PossiblyAPassword',
-  bind_address  => '192.168.1.153',
+  options       => {
+  bind-address  => '192.168.1.153',
+},
 }
 
 mysql::grant { 'DNS':
