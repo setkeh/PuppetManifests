@@ -1,4 +1,4 @@
-class { "mariadb":
+class { "mysql":
   root_password => 'PossiblyAPassword',
 }
 
