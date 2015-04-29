@@ -2,12 +2,12 @@ include powerdns
 
 $pdns_dirs = [ "/etc/powerdns/", "/etc/powerdns/pdns.d/" ]
 
-class { 'powerdns::postgresql':
+class { 'powerdns::mysql':
   ensure   => present,
   user     => 'powerdns',
-  password => 'secret',
-  host     => 'localhost',
-  port     => '5432',
+  password => 'powerdnspassword',
+  host     => '192.168.1.253',
+  port     => '3306',
   dbname   => 'pdns',
   dnssec   => 'yes',
 }
