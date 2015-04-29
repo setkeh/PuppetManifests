@@ -34,4 +34,4 @@ https://forge.puppetlabs.com/jfryman/nginx
 
 https://forge.puppetlabs.com/example42/yum
 
-https://forge.puppetlabs.com/example42/mysql
+https://forge.puppetlabs.com/example42/mariadb
